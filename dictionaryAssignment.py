@@ -21,12 +21,36 @@ hausa = {
     "eat": "ci"
 }
 
+yoruba = {
+    "iya": "mother",
+    "bata": "shoes",
+    "omi": "water",
+    "rara": "no",
+    "baba": "father",
+    "ekaro": "good morning",
+    "nibo": "where",
+    "duro": "stand",
+    "rin": "walk",
+    "mu": "drink",
+    "ibi": "place/here",
+    "wa": "come",
+    "lo": "go",
+    "se": "a question marker(like 'is it')",
+    "pele": "sorry",
+    "oko": "car",
+    "e nle o!": "hello",
+    "ile": "house",
+    "omo": "child",
+    "ologbo": "cat",
+}
+
 languages = {
     "hausa": hausa,
+    "yoruba": yoruba,
 }
 
 print("Language Translator")
-print("Choose a Language: hausa, ")
+print("Choose a Language: hausa,yoruba ")
 
 language = input("Enter Language: ")
 
