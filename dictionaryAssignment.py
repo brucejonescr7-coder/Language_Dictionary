@@ -21,12 +21,61 @@ hausa = {
     "eat": "ci"
 }
 
+yoruba = {
+    "iya": "mother",
+    "bata": "shoes",
+    "omi": "water",
+    "rara": "no",
+    "baba": "father",
+    "ekaro": "good morning",
+    "nibo": "where",
+    "duro": "stand",
+    "rin": "walk",
+    "mu": "drink",
+    "ibi": "place/here",
+    "wa": "come",
+    "lo": "go",
+    "se": "a question marker(like 'is it')",
+    "pele": "sorry",
+    "oko": "car",
+    "e nle o!": "hello",
+    "ile": "house",
+    "omo": "child",
+    "ologbo": "cat",
+}
+
+igbo = {
+    "Thank You": "Ekele",
+    "Please": "Biko",
+    "Hello": "Ndewo",
+    "Person": "Onye",
+    "Child": "Nwa",
+    "House": "Ezi",
+    "Water": "Mmiri",
+    "Food": "Nri",
+    "Clean": "Ocha",
+    "Justice": "Ọfọ",
+    "Don't Kill": "Egbuna",
+    "Head": "Aka",
+    "Sun": "Anyanwu",
+    "Fire": "Ọkụ",
+    "Wealth": "Akụ",
+    "Friend": "Enyi",
+    "Mother": "Nne",
+    "Father": "Nna",
+    "Gold": "Ọla",
+    "Mind": "Uche",
+    "Home": "Ụlọ",
+}
+
 languages = {
     "hausa": hausa,
+    "yoruba": yoruba,
+    "igbo": igbo,
 }
 
 print("Language Translator")
-print("Choose a Language: hausa, ")
+print("Choose a Language: hausa,yoruba,igbo, ")
 
 language = input("Enter Language: ")
 
