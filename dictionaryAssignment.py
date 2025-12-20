@@ -66,16 +66,43 @@ igbo = {
     "Gold": "Ọla",
     "Mind": "Uche",
     "Home": "Ụlọ",
+}# =======================
+# Edo (Bini) Dictionary
+# =======================
+
+edo = {
+    "hello": "koyo",
+    "water": "ami",
+    "food": "ikhian",
+    "house": "owa",
+    "come": "ya",
+    "go": "gha",
+    "man": "okpia",
+    "woman": "okhuo",
+    "child": "omo",
+    "good": "noghie",
+    "bad": "khi",
+    "sun": "owia",
+    "moon": "okhuo-owia",
+    "fire": "urhie",
+    "name": "erhan",
+    "money": "owo",
+    "school": "ikpoba",
+    "book": "ebo",
+    "run": "khiagbe",
+    "eat": "ya"
 }
+
 
 languages = {
     "hausa": hausa,
     "yoruba": yoruba,
     "igbo": igbo,
+    "edo": edo,
 }
 
 print("Language Translator")
-print("Choose a Language: hausa,yoruba,igbo, ")
+print("Choose a Language: hausa,yoruba,igbo,edo, ")
 
 language = input("Enter Language: ")
 
