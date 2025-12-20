@@ -67,9 +67,7 @@ igbo = {
     "Mind": "Uche",
     "Home": "Ụlọ",
 }
-# =======================
-# Edo (Bini) Dictionary
-# =======================
+
 
 edo = {
     "hello": "koyo",
