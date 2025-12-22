@@ -125,7 +125,7 @@ languages = {
 }
 
 print("Language Translator")
-print("Choose a Language: hausa,yoruba,igbo,edo,ebira ")
+print("Choose a Language: hausa, yoruba, igbo, edo, igbo, ebira ")
 
 language = input("Enter Language: ")
 
