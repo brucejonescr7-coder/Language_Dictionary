@@ -92,39 +92,40 @@ edo = {
     "eat": "ya"
 }
 
-ebira = {
-    "hello": "sẹẹ",
-    "water": "omi",
-    "food": "ẹnyẹ",
-    "house": "ozu",
-    "come": "za",
-    "go": "ya",
-    "man": "ohimẹ",
-    "woman": "ozohi",
-    "child": "omavi",
-    "good": "ozuẹ",
-    "bad": "ozuovi",
-    "sun": "ọru",
-    "moon": "okwe",
-    "fire": "uhẹ",
-    "name": "ẹda",
-    "money": "owu",
-    "school": "ikowe",
-    "book": "iwe",
-    "run": "kẹrẹ",
-    "eat": "ri"
+nupe = {
+    "hello": "efu",
+    "water": "emi",
+    "food": "enyẹ",
+    "house": "kata",
+    "come": "ya",
+    "go": "gba",
+    "man": "gana",
+    "woman": "dzena",
+    "child": "kuti",
+    "good": "zhe",
+    "bad": "kpata",
+    "sun": "edi",
+    "moon": "kosa",
+    "fire": "uta",
+    "name": "eti",
+    "money": "kudi",
+    "school": "ikolo",
+    "book": "libu",
+    "run": "kpa",
+    "eat": "ya"
 }
+
 
 languages = {
     "hausa": hausa,
     "yoruba": yoruba,
     "igbo": igbo,
     "edo": edo,
-    "ebira": ebira,
+    "nupe": nupe,
 }
 
 print("Language Translator")
-print("Choose a Language: hausa,yoruba,igbo,edo,ebira ")
+print("Choose a Language: hausa,yoruba,igbo,edo,nupe ")
 
 language = input("Enter Language: ")
 
