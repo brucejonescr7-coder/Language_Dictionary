@@ -1,9 +1,3 @@
-from random import choices
-
-import streamlit as st
-st.title("Language Dictionary Translator")
-choice = st.selectbox('Chose a Language: ', ('Hausa', 'Yoruba', 'Igbo', 'Edo', 'Ebira'))
-
 hausa = {
     "hello": "Sannu",
     "come": "Zo",
@@ -27,157 +21,22 @@ hausa = {
     "eat": "ci"
 }
 
-yoruba = {
-    "iya": "mother",
-    "bata": "shoes",
-    "omi": "water",
-    "rara": "no",
-    "baba": "father",
-    "ekaro": "good morning",
-    "nibo": "where",
-    "duro": "stand",
-    "rin": "walk",
-    "mu": "drink",
-    "ibi": "place/here",
-    "wa": "come",
-    "lo": "go",
-    "se": "a question marker(like 'is it')",
-    "pele": "sorry",
-    "oko": "car",
-    "e nle o!": "hello",
-    "ile": "house",
-    "omo": "child",
-    "ologbo": "cat",
-}
-
-igbo = {
-    "Thank You": "Ekele",
-    "Please": "Biko",
-    "Hello": "Ndewo",
-    "Person": "Onye",
-    "Child": "Nwa",
-    "House": "Ezi",
-    "Water": "Mmiri",
-    "Food": "Nri",
-    "Clean": "Ocha",
-    "Justice": "Ọfọ",
-    "Don't Kill": "Egbuna",
-    "Head": "Aka",
-    "Sun": "Anyanwu",
-    "Fire": "Ọkụ",
-    "Wealth": "Akụ",
-    "Friend": "Enyi",
-    "Mother": "Nne",
-    "Father": "Nna",
-    "Gold": "Ọla",
-    "Mind": "Uche",
-    "Home": "Ụlọ",
-}
-
-
-edo = {
-    "hello": "koyo",
-    "water": "ami",
-    "food": "ikhian",
-    "house": "owa",
-    "come": "ya",
-    "go": "gha",
-    "man": "okpia",
-    "woman": "okhuo",
-    "child": "omo",
-    "good": "noghie",
-    "bad": "khi",
-    "sun": "owia",
-    "moon": "okhuo-owia",
-    "fire": "urhie",
-    "name": "erhan",
-    "money": "owo",
-    "school": "ikpoba",
-    "book": "ebo",
-    "run": "khiagbe",
-    "eat": "ya"
-}
-
-ebira = {
-    "hello": "sẹẹ",
-    "water": "omi",
-    "food": "ẹnyẹ",
-    "house": "ozu",
-    "come": "za",
-    "go": "ya",
-    "man": "ohimẹ",
-    "woman": "ozohi",
-    "child": "omavi",
-    "good": "ozuẹ",
-    "bad": "ozuovi",
-    "sun": "ọru",
-    "moon": "okwe",
-    "fire": "uhẹ",
-    "name": "ẹda",
-    "money": "owu",
-    "school": "ikowe",
-    "book": "iwe",
-    "run": "kẹrẹ",
-    "eat": "ri"
-}
-
-
 languages = {
     "hausa": hausa,
-    "yoruba": yoruba,
-    "igbo": igbo,
-    "edo": edo,
-    "ebira": ebira,
 }
 
-def search_dictionary (word, dictionary):
-    return dictionary.get(word, "Word not found in Dictionary")
-if choice == 'Hausa':
-    dictionary = hausa
-    your_word = st.text_input('Enter a Hausa word: ')
-    if st.button("Translate Word"):
-        result = search_dictionary(your_word.lower(), dictionary)
-        st.title(result)
-elif choice == 'Yoruba':
-    dictionary = yoruba
-    your_word = st.text_input('Enter a Yoruba word: ')
-    if st.button("Translate"):
-        result = search_dictionary(your_word.lower(), dictionary)
-        st.title(result)
-elif choice == 'Igbo':
-    dictionary = igbo
-    your_word = st.text_input('Enter an Igbo word: ')
-    if st.button("Translate"):
-        result = search_dictionary(your_word.lower(), dictionary)
-        st.title(result)
-elif choice == 'Edo':
-    dictionary = edo
-    your_word = st.text_input('Enter an Edo word: ')
-    if st.button("Translate"):
-        result = search_dictionary(your_word.lower(), dictionary)
-        st.title(result)
-elif choice == 'Ebira':
-    dictionary = ebira
-    your_word = st.text_input('Enter a Ebira word: ')
-    if st.button("Translate Word"):
-        result = search_dictionary(your_word.lower(), dictionary)
-        st.title(result)
+print("Language Translator")
+print("Choose a Language: hausa, ")
 
+language = input("Enter Language: ")
 
+if language not in languages:
+    print("Language not found. Pick Again ")
+else:
+    english_word = input("Enter a English word to translate: ")
 
-
-# print("Language Translator")
-# print("Choose a Language: hausa, yoruba, igbo, edo, igbo, ebira ")
-#
-# language = input("Enter Language: ")
-#
-# if language not in languages:
-#     print("Language not found. Pick Again ")
-# else:
-#     english_word = input("Enter a English word to translate: ")
-#
-#     if english_word in languages[language]:
-#         print("Translation is; ",
-#  languages[language][english_word])
-#     else:
-#         print("Word not found in the Dictionary")
+    if english_word in languages[language]:
+        print("Translation is; ",
+ languages[language][english_word])
+    else:
+        print("Word not found in the Dictionary")
