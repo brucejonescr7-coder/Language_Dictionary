@@ -1,3 +1,6 @@
+
+import streamlit as st
+
 hausa = {
     "hello": "Sannu",
     "come": "Zo",
@@ -21,22 +24,132 @@ hausa = {
     "eat": "ci"
 }
 
-languages = {
-    "hausa": hausa,
+yoruba = {
+    "iya": "mother",
+    "bata": "shoes",
+    "omi": "water",
+    "rara": "no",
+    "baba": "father",
+    "ekaro": "good morning",
+    "nibo": "where",
+    "duro": "stand",
+    "rin": "walk",
+    "mu": "drink",
+    "ibi": "place/here",
+    "wa": "come",
+    "lo": "go",
+    "se": "a question marker(like 'is it')",
+    "pele": "sorry",
+    "oko": "car",
+    "e nle o!": "hello",
+    "ile": "house",
+    "omo": "child",
+    "ologbo": "cat",
 }
 
-print("Language Translator")
-print("Choose a Language: hausa, ")
+igbo = {
+    "Thank You": "Ekele",
+    "Please": "Biko",
+    "Hello": "Ndewo",
+    "Person": "Onye",
+    "Child": "Nwa",
+    "House": "Ezi",
+    "Water": "Mmiri",
+    "Food": "Nri",
+    "Clean": "Ocha",
+    "Justice": "Ọfọ",
+    "Don't Kill": "Egbuna",
+    "Head": "Aka",
+    "Sun": "Anyanwu",
+    "Fire": "Ọkụ",
+    "Wealth": "Akụ",
+    "Friend": "Enyi",
+    "Mother": "Nne",
+    "Father": "Nna",
+    "Gold": "Ọla",
+    "Mind": "Uche",
+    "Home": "Ụlọ",
+}
 
-language = input("Enter Language: ")
 
-if language not in languages:
-    print("Language not found. Pick Again ")
-else:
-    english_word = input("Enter a English word to translate: ")
+edo = {
+    "hello": "koyo",
+    "water": "ami",
+    "food": "ikhian",
+    "house": "owa",
+    "come": "ya",
+    "go": "gha",
+    "man": "okpia",
+    "woman": "okhuo",
+    "child": "omo",
+    "good": "noghie",
+    "bad": "khi",
+    "sun": "owia",
+    "moon": "okhuo-owia",
+    "fire": "urhie",
+    "name": "erhan",
+    "money": "owo",
+    "school": "ikpoba",
+    "book": "ebo",
+    "run": "khiagbe",
+    "eat": "ya"
+}
 
-    if english_word in languages[language]:
-        print("Translation is; ",
- languages[language][english_word])
+ebira = {
+    "hello": "sẹẹ",
+    "water": "omi",
+    "food": "ẹnyẹ",
+    "house": "ozu",
+    "come": "za",
+    "go": "ya",
+    "man": "ohimẹ",
+    "woman": "ozohi",
+    "child": "omavi",
+    "good": "ozuẹ",
+    "bad": "ozuovi",
+    "sun": "ọru",
+    "moon": "okwe",
+    "fire": "uhẹ",
+    "name": "ẹda",
+    "money": "owu",
+    "school": "ikowe",
+    "book": "iwe",
+    "run": "kẹrẹ",
+    "eat": "ri"
+}
+
+languages = {
+    "hausa": hausa,
+    "yoruba": yoruba,
+    "igbo": igbo,
+    "edo": edo,
+    "ebira": ebira,
+}
+
+st.title("🌍 Language Translator")
+
+language = st.selectbox("Choose a Language", languages.keys())
+
+english_word = st.text_input("Enter an English word to translate")
+
+if st.button("Translate"):
+    if english_word.lower() in languages[language]:
+        st.success(f"Translation: {languages[language][english_word.lower()]}")
     else:
-        print("Word not found in the Dictionary")
+        st.error("Word not found in the dictionary")
+
+# print("Language Translator")
+# print("Choose a Language: hausa, ")
+#
+# language = input("Enter Language: ")
+#
+# if language not in languages:
+#     print("Language not found. Pick Again ")
+# else:
+#     english_word = input("Enter a English word to translate: ")
+#
+#     if english_word in languages[language]:
+#         print("Translation is; ",
+#  languages[language][english_word])
+#     else:
+#         print("Word not found in the Dictionary")
